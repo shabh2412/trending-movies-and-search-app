@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Trending Movies</title>
+      <style>
+          #topNav {
+              z-index: 100;
+          }
+          .voteAvg {
+              top: -1rem;
+          }
+      </style>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id="topNav" class="container-fluid position-sticky top-0 mb-3 bg-dark">
+            <div class="row">
+                <h1 id="title" class="text-center bg-dark text-white p-2">Trending Movies</h1>
+                <a href="./index.html" class="text-center text-capitalize w-100 p-2">Search for movies!</a>
+            </div>
+        </div>
+        <div id="movies" class="container-fluid d-flex flex-wrap gap-3">
+            
+        </div>
+        <div class="container-fluid d-flex flex-wrap my-3">
+            <div id="pagesRow" class="row mx-auto">
+
+            </div>
+        </div>
+    </body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="./trending.js"></script>

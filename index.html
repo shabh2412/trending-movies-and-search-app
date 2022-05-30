@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HOTSTAR Implementation</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <style>
+            #searchResults {
+                height: 100px;
+                overflow: scroll;
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+            }
+            #searchResults::-webkit-scrollbar {
+                display: none;
+            }
+            #searchResultsRow > #searchResults {
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            }
+            #searchResults, #outputDiv {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid mb-3">
+            <div class="row bg-dark p-3">
+                <div class="col-lg-3 col-md-4 col-sm-12 mx-auto mb-2">
+                    <form>
+                        <input id="movieInput" oninput="debounceSearchFunction(getMovieInput,2000)" type="text" class="form-control" placeholder="Search for a movie">
+                    </form>
+                </div>
+                <a href="./trending.html" class="text-center text-capitalize w-100">Check out popular movies!</a>
+            </div>
+            <div class="row" id="searchResultsRow">
+                <div class="col-lg-3 col-md-4 col-sm-12 mx-auto" id="searchResults">
+                    
+                </div>
+            </div>
+            <div class="row my-3" id="selectedMovieRow">
+                <div class="col-lg-6 col-md-6 col-sm-12 mx-auto">
+                    <div class="container d-flex">
+                        <div id="outputDiv" class="card mx-auto" style="width: 18rem;">
+                            <img src="" alt="" id="selectedMovieImage" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="text-danger" id="movieTitle"></h5>
+                                <div class="card-text">
+                                    <p class="fw-bold">Year: <span class="text-primary" id="yearOfRelease"></span></p>
+                                    <p class="fw-bold">IMDb: <span class="text-primary" id="imdbRating"></span></p>
+                                    <p class="fw-bold">Actors: <span class="text-primary" id="actors"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="./index.js"></script>
